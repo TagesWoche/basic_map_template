@@ -1,0 +1,67 @@
+<html>
+<meta charset="utf-8">
+<head>
+  <link rel="stylesheet" href="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/themes/css/cartodb.ie.css" />
+    <![endif]-->
+	
+</head>
+
+<body onload="init()">
+
+    
+       <section id="mapContainer">
+
+        <div id="map"></div>
+
+        <!-- mobile hamburger navigation -->
+        <input type="checkbox" id="mobilenav" class="mobilenav" /><label for="mobilenav"></label>
+
+        <div id="legende">
+          <h2>Interaktive Karte</h2>
+
+            <p>Auf der Karte sehen Sie, wo wie viele Wohnungen von Immobilien&shy;firmen im Zeitraum von 2008 bis 2017 verkauft wurden. Grosse Punkte weisen auf viele verkaufte Wohnungen hin, kleine auf wenige.</p>
+
+            <div class='cartodb-legend bubble'> 
+            <ul>
+              <li>2</li>
+              <li class="graph" style="background: rgb(48, 163, 112);">
+                <div class="bubbles"></div>
+              </li>
+              <li>24 <span class="mobile-hide">verkaufte Wohnungen</span></li>
+            </ul>
+          </div>
+
+            <p>Wenn Sie die Karte entsperren, können Sie den Kartenausschnitt beliebig verändern. Klicken Sie auf die Punkte für weitere Informationen.</p>
+
+             <label class="checkbox profil-form__input--checkbox">
+              <input type="checkbox" class="mapbox profil-form__input--field" name="mapbox" id="mapbox"> <span class="profil-form__input--text">Karte entsperren</span>
+            </label>
+
+            <p style="margin-top: 25px; margin-bottom: 10px;">Durch Klicken auf die Buttons können Sie die Immobilien filtern.</p>
+
+            <div id="filter">
+
+            <a class="filter button-alle" data-id="all">alle Verkäufe</a>
+            <a class="filter button-sanierung" data-id="sanierung">Sanierungen</a>
+            <a class="filter button-abbruch" data-id="abbruch">Abbrüche & Neubauten</a>
+            <a class="filter button-andere" data-id="andere">andere</a>
+
+          </div>
+          
+
+        </div>
+        
+    </section>
+
+  
+  
+    <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</body>
+</html>
